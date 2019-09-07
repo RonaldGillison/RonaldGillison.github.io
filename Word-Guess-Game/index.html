@@ -1,0 +1,77 @@
+D<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+  <div id="main-container" class="container">
+    <section class="main-section">
+      <h3>Word Guess</h3>
+
+      <img src="https://assetstorev1-prd-cdn.unity3d.com/key-image/8fb98eec-43ce-4024-ba26-918d4b24b779.jpg" class="img-fluid" alt="Responsive image"> 
+
+      
+    </section>
+
+  </div> 
+<script type="text/javascript"></script>
+<script>
+
+var name = prompt("What's your name?");
+console.log("Hello " + name);
+//create an array of words
+var words = [
+  "tomato",
+  "icecream",
+  "bagel",
+  "coyote",  
+]; 
+// Pick a random word
+var word = words[Math.floor(Math.random() * words.length)];
+// Create an answer array
+var answerArray = [];
+for(var i = 0; i < word.length; i++) {
+  answerArray[i] = "_";
+}
+var remainingLetters = word.length;  
+
+// The game loop
+while (remainingLetters > 0) {
+  // Show the player their progress
+  alert(answerArray.join(" "));   
+
+  // Get a guess from the player
+
+
+    var guess = prompt("Guess a letter, or click Cancel to stop playing.");
+    if (guess === null) {
+    // Exit the game loop    
+    break;
+    } else if (guess.length !== 1) {
+    alert("Please enter a single letter.");    
+    } else {
+        // Update the game with the guess
+    }  
+    for (var j = 0; j < word.length; j++) {
+    if (word[j] === guess) {
+        answerArray[j] = guess;
+        remainingLetters--;
+      }     
+    }  
+ }
+// The end of the game loop
+
+// Show the answer and congratulate the player
+    alert(answerArray.join(" "));
+    alert("Good job! The answer was " +word);
+</script>
+<div><img src="https://previews.123rf.com/images/iqoncept/iqoncept1804/iqoncept180400025/98729663-guess-speculation-thinker-thought-clouds-word-3d-illustration.jpg" class="img-fluid" alt="Word Guess"></div>
+</body>
+
+</html>
