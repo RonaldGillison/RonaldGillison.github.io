@@ -1,0 +1,19 @@
+.jumbotron {
+    
+    background-size: cover;
+}
+
+h1 {
+    font-family: "Bubble Letters", cursive;
+    font-size: 100px;
+    color: rgb(158, 176, 235);
+    text-align: center;
+}
+
+.bird-species {
+    margin: 2px 10px;
+}
+
+.pic { 
+    margin-bottom: 15px;
+}
