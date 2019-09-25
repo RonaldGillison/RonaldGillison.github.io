@@ -1,0 +1,15 @@
+/* Style for Trivia Game */
+
+html, body {
+
+    background-color: blue;
+    
+}
+
+
+.jumbotron {
+    background-color:royalblue;
+    color: white;
+    
+    
+}
