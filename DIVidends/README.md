@@ -1,0 +1,3 @@
+# DIVidends
+
+Frederick Articuno
